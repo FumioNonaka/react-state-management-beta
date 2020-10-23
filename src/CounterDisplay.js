@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
 import { AppContext } from './AppContext';
 
-	const CounterDisplay = () => {
-		const { count, reset, decrement, increment } = useContext(AppContext);
-		return (
-			<>
-				Count: {count}
-				<button onClick={reset}>Reset</button>
-				<button onClick={decrement}>-</button>
-				<button onClick={increment}>+</button>
-			</>
-		);
+const CounterDisplay = () => {
+	const { state, dispatch } = useContext(AppContext);
+	return (
+		<>
+			Count: {state.count}
+			<button onClick={() => dispatch({ type: 'reset' })}>Reset</button>
+			<button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+			<button onClick={() => dispatch({ type: 'increment' })}>+</button>
+		</>
+	);
 };
 
 export default CounterDisplay;
