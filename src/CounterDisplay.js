@@ -1,6 +1,9 @@
 import React from 'react';
+import { CounterContainer } from './CounterContainer';
 
-	const CounterDisplay = ({ count, reset, decrement, increment }) => {
+	// const CounterDisplay = ({ count, reset, decrement, increment }) => {
+	const CounterDisplay = () => {
+		const { count, reset, decrement, increment } = CounterContainer.useContainer();
 		return (
 			<>
 				Count: {count}
