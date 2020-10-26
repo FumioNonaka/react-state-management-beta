@@ -1,8 +1,8 @@
 import React, { createContext, useReducer } from 'react';
 import reducer from './reducder';
 
-const initialCount = 0;
-export const AppContext = createContext(initialCount);
+const initialState = { count: 0 };
+export const AppContext = createContext(initialState);
 export const AppProvider = ({ children }) => {
 	const [state, dispatch] = useReducer(reducer, initialCount);
 	const reset = () => dispatch({ type: 'reset' });
