@@ -10,4 +10,5 @@ const reducer = (state, action) => {
 			console.error('error');
 	}
 };
+
 export default reducer;
