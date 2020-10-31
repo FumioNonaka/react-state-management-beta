@@ -1,15 +1,16 @@
 import React from 'react';
-import { AppProvider } from './AppContext';
+import { CounterContainer } from './CounterContainer';
 import CounterDisplay from './CounterDisplay';
 import './App.css';
 
 function App() {
 	return (
-		<AppProvider>
+		<CounterContainer.Provider>
 			<div className="App">
-				<CounterDisplay />
+				<CounterDisplay
+				/>
 			</div>
-		</AppProvider>
+		</CounterContainer.Provider>
 	);
 }
 
